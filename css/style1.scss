@@ -1,0 +1,39 @@
+$color_text:#f6f5f2;
+
+.container1_hover{
+    .center{
+        h2{
+            a{
+                color: $color_text;
+            }
+        }
+    }
+}
+
+@mixin hover_text {
+    font: {
+        family: 'Josefin Sans', sans-serif;
+        weight: 300;
+        size: 16px;
+    }
+}
+.container1_hover{
+    .center{
+        h2{
+            a{
+                @include hover_text;
+            }
+        }
+    }
+}
+
+@function title($pxsize) {
+    @return ($pxsize/2);
+}
+.container1{
+    .content{
+        h1{
+            font-size: title(204px);
+        }
+    }
+}
